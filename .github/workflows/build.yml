@@ -30,10 +30,12 @@ jobs:
         shell: bash
         run: |
           df -h
-          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache /usr/local/share/boost \
+          # Do not delete /opt/hostedtoolcache: Namespace mounts it as a busy runner-managed path.
+          # Cleanup is best-effort; a protected path must never abort the build.
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /usr/local/share/boost \
             /usr/share/swift /usr/local/.ghcup /usr/local/share/powershell /usr/local/share/chromium \
             /usr/share/miniconda /opt/microsoft /opt/az /usr/lib/google-cloud-sdk /usr/lib/jvm /usr/lib/firefox \
-            /usr/local/aws-cli /usr/local/aws-sam-cli /usr/local/julia* /usr/local/n /opt/google /usr/local/graalvm
+            /usr/local/aws-cli /usr/local/aws-sam-cli /usr/local/julia* /usr/local/n /opt/google /usr/local/graalvm || true
           sudo docker image prune -af || true
           sudo apt-get clean
           sudo swapoff -a || true

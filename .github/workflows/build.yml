@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: namespace-profile-speed
     timeout-minutes: 360
     env:
       AERA_BUILD_DEVICE: CPH1911

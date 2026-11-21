@@ -1,0 +1,25 @@
+== Sat Nov 21 20:44:53 UTC 2026 run=44946830071 sha=33a789af2d56fc6ba1c12b70cd7c2e664a61ac73
+               total        used        free      shared  buff/cache   available
+Mem:           64359        1177        1355          46       61826       62269
+Swap:              0           0           0
+overlay         284G   77G  208G  27% /
+== oom/kill messages
+== last 250 lines of build.log
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         284G   77G  208G  27% /
+tmpfs            64M     0   64M   0% /dev
+/dev/vdj         49G  4.9M   49G   1% /cache
+/dev/vde        219M  188M   26M  88% /nsc/bin
+/dev/vdf        831M  424M  392M  52% /nsc/powertoys
+overlay         284G   77G  208G  27% /opt/github-runner-pkg
+/dev/vdb        670M  385M  271M  59% /vendor/docker
+shm              32G     0   32G   0% /dev/shm
+none             32G  136K   32G   1% /run/nsc
+/dev/root       284G   77G  208G  27% /etc/homebrew/curlrc
+tmpfs           4.0K     0  4.0K   0% /proc/acpi
+               total        used        free      shared  buff/cache   available
+Mem:           64359        1215        1344          46       61800       62387
+Swap:              0           0           0
+18G	/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/.repo
+59G	/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera
+== out/error.log
